@@ -22,6 +22,9 @@ public class Cell : MonoBehaviour {
     //public virtual void VerifyConnection() { }
     public virtual void NoPowerColorChange() { }
     public virtual void PowerColorChange() { }
+    public void Die() {
+        Destroy(gameObject);
+    }
 	
 	
 }
