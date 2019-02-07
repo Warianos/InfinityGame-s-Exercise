@@ -4,19 +4,20 @@ timeCreated: 1549451036
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: EmptyCell
-    21300002: lamp0
-    21300004: lamp90
-    21300006: lamp180
-    21300008: lamp270
-    21300010: lamp270
-    21300012: 2WayConnection
-    21300014: 4WayConnection
-    21300016: hover
-    21300018: elec0
-    21300020: elec90
-    21300022: elec180
+    21300000: 0EmptyCell
+    21300002: 1lamp0
+    21300004: 2lamp90
+    21300006: 3lamp180
+    21300008: 4lamp270
+    21300010: 4lamp270
+    21300012: 5Way2Connection
+    21300014: 6Way4Connection
+    21300016: 7hover
+    21300018: 8elec0
+    21300020: 9elec90
+    21300022: 10elec180
     21300024: elec270
+    21300026: 11elec270
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -103,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EmptyCell
+      name: 0EmptyCell
       rect:
         serializedVersion: 2
         x: 0
@@ -117,7 +118,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: lamp0
+      name: 1lamp0
       rect:
         serializedVersion: 2
         x: 120
@@ -131,7 +132,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: lamp90
+      name: 2lamp90
       rect:
         serializedVersion: 2
         x: 240
@@ -145,7 +146,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: lamp180
+      name: 3lamp180
       rect:
         serializedVersion: 2
         x: 360
@@ -159,7 +160,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: lamp270
+      name: 4lamp270
       rect:
         serializedVersion: 2
         x: 0
@@ -173,7 +174,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: 2WayConnection
+      name: 5Way2Connection
       rect:
         serializedVersion: 2
         x: 120
@@ -187,7 +188,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: 4WayConnection
+      name: 6Way4Connection
       rect:
         serializedVersion: 2
         x: 240
@@ -201,7 +202,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hover
+      name: 7hover
       rect:
         serializedVersion: 2
         x: 360
@@ -209,13 +210,13 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: elec0
+      name: 8elec0
       rect:
         serializedVersion: 2
         x: 0
@@ -223,27 +224,27 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: elec90
+      name: 9elec90
       rect:
         serializedVersion: 2
-        x: 120
+        x: 119
         y: 152
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: elec180
+      name: 10elec180
       rect:
         serializedVersion: 2
         x: 240
@@ -251,13 +252,13 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: elec270
+      name: 11elec270
       rect:
         serializedVersion: 2
         x: 360
@@ -265,7 +266,7 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

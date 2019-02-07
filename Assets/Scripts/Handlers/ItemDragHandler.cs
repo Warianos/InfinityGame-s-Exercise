@@ -5,23 +5,49 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler {
+
     
-    public
+
+    private Transform originalCell;
+    private bool isDragging;
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        throw new NotImplementedException();
+        if(GridManager.instance.Grid[transform.parent.GetSiblingIndex()] != null){ //verificar se é mm o parent que temos de ver
+            Debug.Log("entrei aqui no OnPointerDown");
+
+            if(eventData.button == PointerEventData.InputButton.Left)
+            {
+                isDragging = true;
+                originalCell = transform.parent;
+                transform.SetParent(transform.parent.parent);
+                GetComponent<CanvasGroup>().blocksRaycasts = false;
+            }
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        throw new NotImplementedException();
+        if (GridManager.instance.Grid[originalCell.transform.GetSiblingIndex()] != null)
+        {
+            Debug.Log("entrei aqui no OnDrag");
+            if (eventData.button == PointerEventData.InputButton.Left)
+            {
+                transform.position = Input.mousePosition;
+            }
+        }
+
     }
-
-
     public void OnPointerUp(PointerEventData eventData)
     {
-        throw new NotImplementedException();
+        Debug.Log("entrei aqui no OnPointerUp");
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            isDragging = false;
+            transform.SetParent(originalCell);
+            transform.localPosition = Vector3.zero;
+            GetComponent<CanvasGroup>().blocksRaycasts = true;
+        }
     }
 
     

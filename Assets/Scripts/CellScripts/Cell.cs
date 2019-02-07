@@ -6,6 +6,10 @@ public class Cell : MonoBehaviour {
 
     private bool hasPower;
 
+    private int currentPos;
+
+    private bool isEmpty;
+
     protected bool HasPower
     {
         get
@@ -16,6 +20,32 @@ public class Cell : MonoBehaviour {
         set
         {
             hasPower = value;
+        }
+    }
+
+    public int CurrentPos
+    {
+        get
+        {
+            return currentPos;
+        }
+
+        set
+        {
+            currentPos = value;
+        }
+    }
+
+    public bool IsEmpty
+    {
+        get
+        {
+            return isEmpty;
+        }
+
+        set
+        {
+            isEmpty = value;
         }
     }
 
