@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class LampCell90 : Cell {
 
-	
+    void Awake()
+    {
+        HasPower = true;
+    }
 }

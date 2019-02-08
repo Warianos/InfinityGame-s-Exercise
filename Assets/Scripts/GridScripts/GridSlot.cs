@@ -6,57 +6,34 @@ using UnityEngine.EventSystems;
 
 public class GridSlot : MonoBehaviour, IDropHandler {
 
-    
-
-	public void UpdateSlot () {
-        if(GridManager.instance.Grid[transform.GetSiblingIndex()] != null)
-        {
-            transform.gameObject.SetActive(true);
-        }
-        else
-        {
-            transform.gameObject.SetActive(false);
-        }
-		
-	}
-
     public void OnDrop(PointerEventData eventData)
     {
-        GameObject droppedCell = GridManager.instance.Grid[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()]; // the cell that was dragged
-                                                                                                                                                      // Debug.Log(droppedCell.name);
 
-        Debug.Log(eventData.pointerDrag.transform.parent.name + "é igual a" + gameObject.name);
-        if (eventData.pointerDrag.transform.parent.name == gameObject.name) //if the dragged parent´s name is equal to this slot´s name, then does nothing.
+        int draggedObjIdx = eventData.pointerDrag.transform.parent.GetSiblingIndex();
+        int finalPosIdx = transform.GetSiblingIndex();
+
+        if (eventData.pointerDrag.transform.parent.name == gameObject.name) 
         {
             Debug.Log("tenho o nome igual");
             return;
         }
-
-        
-        if (GridManager.instance.Grid[transform.GetSiblingIndex()].GetComponent<Cell>().IsEmpty) // if the cell is empty it can move to that slot
+        if (transform.GetComponent<Cell>().IsEmpty) 
         {
             Debug.Log("estou num sitio sem nada");
+            eventData.pointerDrag.transform.parent.SetSiblingIndex(finalPosIdx);
+            transform.SetSiblingIndex(draggedObjIdx);
+            transform.parent.GetChild(finalPosIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower(); //checks if the object is connected to power or not
 
-            GameObject tempCell = GridManager.instance.Grid[transform.GetSiblingIndex()];
-           
-            GridManager.instance.Grid[transform.GetSiblingIndex()] = droppedCell;
-
-            //gameObject = droppedCell;
-
-
-            GridManager.instance.Grid[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()] = tempCell;
-            
-            GridManager.instance.UpdateSlots(transform.parent,droppedCell.GetComponent<Cell>().CurrentPos, tempCell.GetComponent<Cell>().CurrentPos);
         }
-        else // if the cell is not empty then the cells swap places
+        else 
         {
             Debug.Log("estou num sitio com algo");
-            GameObject tempCell = GridManager.instance.Grid[transform.GetSiblingIndex()];
-            GridManager.instance.Grid[transform.parent.GetSiblingIndex()] = droppedCell;
-            GridManager.instance.Grid[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()] = tempCell;
-
-            GridManager.instance.UpdateSlots(transform.parent, droppedCell.GetComponent<Cell>().CurrentPos, tempCell.GetComponent<Cell>().CurrentPos);
+            eventData.pointerDrag.transform.parent.SetSiblingIndex(finalPosIdx);
+            transform.SetSiblingIndex(draggedObjIdx);
+            transform.parent.GetChild(draggedObjIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower();//checks if the new object in the iniPos is connected to power or not
+            transform.parent.GetChild(finalPosIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower();//checks if the new object in the finalPos is connected to power or not
         }
+        
     }
 
 }

@@ -52,6 +52,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridSize: {x: 7, y: 12}
+  grid:
+  - {fileID: 1884807915527474, guid: 87f1332a419b28949a4dc5f9b77bcc6d, type: 2}
+  - {fileID: 1915811433807752, guid: d9602a854882e0843b6c6724cceedfdb, type: 2}
+  - {fileID: 1911860726899996, guid: c4af97297dc44ab47ab9e1a4fed84675, type: 2}
+  - {fileID: 1780679214345014, guid: 9d35596c07afc4849ac7ff9ff1905e4c, type: 2}
+  - {fileID: 1304409865310570, guid: 2679f8b959d4e794983f7cd1fae2518e, type: 2}
+  - {fileID: 1467120429141710, guid: 8c76e04d4b7e16e42acd0e7511cc41b7, type: 2}
+  - {fileID: 1663930692258016, guid: edb879ae4aa90644b9d2e47c53b5cc71, type: 2}
+  - {fileID: 1265259058036062, guid: 99ec1048de37f164e8a20aebb5cddb86, type: 2}
+  - {fileID: 1767124487641886, guid: 239b7d3845c1ffe43a15cc5799695170, type: 2}
+  - {fileID: 1793758218902306, guid: a9ecb85ea4194a740b78c09dbc3c4691, type: 2}
+  - {fileID: 1108667864293632, guid: af24f4f921f64a24faf4b1faddb97435, type: 2}
+  - {fileID: 1635920064922536, guid: 2155085c017271b4f814a1c820f6f1c1, type: 2}
   gridPanel: {fileID: 0}
-  Cell: {fileID: 1068404427907092, guid: 57e24876f81bc0e47b29037b705dbbf4, type: 2}
-  EmptyCell: {fileID: 1119416405007552, guid: 87f1332a419b28949a4dc5f9b77bcc6d, type: 2}

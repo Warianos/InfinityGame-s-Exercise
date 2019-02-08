@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LampCell180 : Cell {
+    void Awake()
+    {
+        HasPower = true;
+    }
 
-	
 }

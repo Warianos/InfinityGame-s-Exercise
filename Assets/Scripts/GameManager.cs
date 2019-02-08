@@ -39,10 +39,7 @@ public class GameManager : MonoBehaviour {
 		//adicionar aqui a iniciação da grid e ler o primeiro nivel
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 
     void SetupBoard(int level)
     {

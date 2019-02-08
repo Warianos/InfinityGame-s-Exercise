@@ -13,7 +13,8 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(GridManager.instance.Grid[transform.parent.GetSiblingIndex()] != null){ //verificar se é mm o parent que temos de ver
+        
+       
             Debug.Log("entrei aqui no OnPointerDown");
 
             if(eventData.button == PointerEventData.InputButton.Left)
@@ -23,23 +24,27 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
                 transform.SetParent(transform.parent.parent);
                 GetComponent<CanvasGroup>().blocksRaycasts = false;
             }
-        }
+        
+
+
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (GridManager.instance.Grid[originalCell.transform.GetSiblingIndex()] != null)
-        {
+        
+        
+        
             Debug.Log("entrei aqui no OnDrag");
             if (eventData.button == PointerEventData.InputButton.Left)
             {
                 transform.position = Input.mousePosition;
             }
-        }
-
+        
+        
     }
     public void OnPointerUp(PointerEventData eventData)
     {
+        
         Debug.Log("entrei aqui no OnPointerUp");
         if (eventData.button == PointerEventData.InputButton.Left)
         {
@@ -48,6 +53,7 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
             transform.localPosition = Vector3.zero;
             GetComponent<CanvasGroup>().blocksRaycasts = true;
         }
+        
     }
 
     

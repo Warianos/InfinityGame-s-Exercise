@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CellScripts\Cell.cs" />
-     <Compile Include="Assets\Scripts\CellScripts\H2WayConnection.cs" />
      <Compile Include="Assets\Scripts\CellScripts\H2WayConnectionCell.cs" />
      <Compile Include="Assets\Scripts\CellScripts\LampCell0.cs" />
      <Compile Include="Assets\Scripts\CellScripts\LampCell180.cs" />

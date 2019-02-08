@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour {
 
-    private bool hasPower;
+    protected bool hasPower;
 
     private int currentPos;
 
     private bool isEmpty;
 
-    protected bool HasPower
+    public bool HasPower
     {
         get
         {
@@ -52,6 +52,7 @@ public class Cell : MonoBehaviour {
     //public virtual void VerifyConnection() { }
     public virtual void NoPowerColorChange() { }
     public virtual void PowerColorChange() { }
+    public virtual void CheckIfConnectedCellHasPower() {} //cada tipo de cell tem a sua forma de verificar se a celula perto está com power ou não.
     public void Die() {
         Destroy(gameObject);
     }
