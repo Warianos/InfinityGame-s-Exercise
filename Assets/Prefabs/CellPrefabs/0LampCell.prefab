@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222784819176979278}
   - component: {fileID: 114205804634753252}
   - component: {fileID: 114699454116852908}
+  - component: {fileID: 95869645065747282}
   m_Layer: 5
   m_Name: 0LampCell
   m_TagString: Untagged
@@ -66,6 +67,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &95869645065747282
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1467120429141710}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32fdc86dbcea32e45a7d2aa748d56cd3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114205804634753252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc457386cacf1f94281eeb372078a78f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cellType: 0
 --- !u!114 &114869700799731630
 MonoBehaviour:
   m_ObjectHideFlags: 1

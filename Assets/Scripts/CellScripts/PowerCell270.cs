@@ -4,22 +4,11 @@ using UnityEngine;
 
 public class PowerCell270 : Cell {
 
-    public override void CheckIfConnectedCellHasPower()
+    void Awake()
     {
-        int currentPos = CurrentPos;
-        Transform down = transform.parent.GetChild(currentPos - 7);
-
-        if (down != null)
-        {
-            if (down.GetComponent<Cell>().HasPower) HasPower = true;
-            PowerColorChange();
-            return;
-        }
-        else
-        {
-            HasPower = false;
-            PowerColorChange();
-        }
-
+        HasPower = true;
+           
+        CellType = Type.PowerCell270;
     }
+    
 }

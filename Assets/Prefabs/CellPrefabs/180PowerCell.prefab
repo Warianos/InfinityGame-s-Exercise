@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 222788965078907622}
   - component: {fileID: 114081345518438782}
   - component: {fileID: 114689106360956658}
-  - component: {fileID: 95070111581377630}
+  - component: {fileID: 95827232129216892}
   m_Layer: 5
   m_Name: 180PowerCell
   m_TagString: Untagged
@@ -67,14 +67,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &95070111581377630
+--- !u!95 &95827232129216892
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780679214345014}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 32fdc86dbcea32e45a7d2aa748d56cd3, type: 2}
   m_CullingMode: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d4fcd9f1d0ca449ad2c6db8b0ab210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cellType: 0
 --- !u!114 &114712795748778258
 MonoBehaviour:
   m_ObjectHideFlags: 1

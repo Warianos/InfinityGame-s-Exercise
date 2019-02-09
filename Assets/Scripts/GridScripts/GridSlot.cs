@@ -22,7 +22,10 @@ public class GridSlot : MonoBehaviour, IDropHandler {
             Debug.Log("estou num sitio sem nada");
             eventData.pointerDrag.transform.parent.SetSiblingIndex(finalPosIdx);
             transform.SetSiblingIndex(draggedObjIdx);
-            transform.parent.GetChild(finalPosIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower(); //checks if the object is connected to power or not
+            transform.GetComponent<Cell>().CurrentPos = draggedObjIdx;
+            eventData.pointerDrag.transform.parent.GetComponent<Cell>().CurrentPos = finalPosIdx;
+            //transform.parent.GetChild(finalPosIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower(); //checks if the object is connected to power or not
+            //GridManager.instance.UpdateCells();
 
         }
         else 
@@ -30,8 +33,12 @@ public class GridSlot : MonoBehaviour, IDropHandler {
             Debug.Log("estou num sitio com algo");
             eventData.pointerDrag.transform.parent.SetSiblingIndex(finalPosIdx);
             transform.SetSiblingIndex(draggedObjIdx);
-            transform.parent.GetChild(draggedObjIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower();//checks if the new object in the iniPos is connected to power or not
-            transform.parent.GetChild(finalPosIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower();//checks if the new object in the finalPos is connected to power or not
+            transform.GetComponent<Cell>().CurrentPos = draggedObjIdx;
+            eventData.pointerDrag.transform.parent.GetComponent<Cell>().CurrentPos = finalPosIdx;
+            //transform.parent.GetChild(draggedObjIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower();//checks if the new object in the iniPos is connected to power or not
+            //transform.parent.GetChild(finalPosIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower();//checks if the new object in the finalPos is connected to power or not
+            //GridManager.instance.UpdateCells();
+
         }
         
     }

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222288091920370244}
   - component: {fileID: 114321275265190542}
   - component: {fileID: 114953252595137872}
+  - component: {fileID: 95485085954113592}
   m_Layer: 5
   m_Name: 180LampCell
   m_TagString: Untagged
@@ -66,6 +67,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &95485085954113592
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265259058036062}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32fdc86dbcea32e45a7d2aa748d56cd3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114225703878744524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,6 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d9f1f2ea5a2124c8e1528d551291b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cellType: 0
 --- !u!222 &222121905783958822
 CanvasRenderer:
   m_ObjectHideFlags: 1

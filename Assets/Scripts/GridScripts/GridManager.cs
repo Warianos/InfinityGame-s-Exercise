@@ -65,7 +65,18 @@ public class GridManager : MonoBehaviour {
     //resources sprites texture
     Sprite[] sprites;
 
-  
+    public Vector2 GridSize
+    {
+        get
+        {
+            return gridSize;
+        }
+
+        set
+        {
+            gridSize = value;
+        }
+    }
 
     void Awake () {
         
@@ -80,19 +91,29 @@ public class GridManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
 
 
-
         InitGame();
-        
-       
-     
-   
 
-    //sprites = Resources.LoadAll<Sprite>("Textures/InfinityGamesExercise");
+
+
+
+
+
+        //sprites = Resources.LoadAll<Sprite>("Textures/InfinityGamesExercise");
+
+
+    }
+    void Start()
+    {
+        //UpdateCells();
         
-        
+        //UpdateCells();
+        InvokeRepeating("UpdateCells", 0, 0.25f);
     }
 
-
+    void Update()
+    {
+        //InvokeRepeating("UpdateCells", 0, 2);
+    }
 
     private void InitGame()
     {
@@ -133,16 +154,20 @@ public class GridManager : MonoBehaviour {
     {
         Debug.Log("Created");
         int rand = 0;
-        for (int x = 0; x < (int)gridSize.x * (int)gridSize.y; x++)
+        for (int x = 0; x < (int)GridSize.x * (int)GridSize.y; x++)
         {
             rand = Random.Range(0, 12);
             GameObject cell = Instantiate(grid[rand]);
             if (rand == 0){ //é empty
                 cell.GetComponent<Cell>().IsEmpty = true;
             }
+            cell.GetComponent<Cell>().CurrentPos = x;
             cell.name = "Cell" + x;
             cell.transform.SetParent(gridPanel);
+            
+            Debug.Log(cell.GetComponent<Cell>().CurrentPos);
         }
+        
     }
 
     private void NormalGridGenerator()
@@ -173,6 +198,26 @@ public class GridManager : MonoBehaviour {
 
     }
 
+    public void UpdateCells()
+    {
+        foreach(Transform cell in gridPanel.transform)
+        {
+            //Debug.Log(cell.GetComponent<Cell>().CellAnimator);
+            if (cell != null)
+            {
+                if (cell.GetComponent<Cell>().cellType != Cell.Type.PowerCell0 &&
+                   cell.GetComponent<Cell>().cellType != Cell.Type.PowerCell90 &&
+                   cell.GetComponent<Cell>().cellType != Cell.Type.PowerCell180 &&
+                   cell.GetComponent<Cell>().cellType != Cell.Type.PowerCell270)
+                {
 
+
+                    cell.GetComponent<Cell>().CheckIfConnectedCellHasPower();
+
+                }
+            }
+            
+        }
+    }
     
 }
