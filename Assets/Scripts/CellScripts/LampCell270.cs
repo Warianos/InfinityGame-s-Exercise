@@ -30,16 +30,23 @@ public class LampCell270 : Cell {
             down = transform.parent.GetChild(currentPos + gridWidth);
             if (down.GetComponent<Cell>().HasPower)
             {
-                if (down.GetComponent<Cell>().cellType == Type.Way4 ||
+                
+                    if (down.GetComponent<Cell>().cellType == Type.Way4 ||
                     down.GetComponent<Cell>().cellType == Type.LampCell90 ||
                     down.GetComponent<Cell>().cellType == Type.PowerCell90 ||
                     down.GetComponent<Cell>().cellType == Type.V2Way)
-                {
-                    HasPower = true;
-                    PowerColorChange();
-                    //down.GetComponent<Cell>().CheckIfConnectedCellHasPower();
-                    return;
+                    {
+                    
+
+
+                   
+                        HasPower = true;
+                        PowerColorChange();
+                        //up.GetComponent<Cell>().CheckIfConnectedCellHasPower();
+                        return;
+                    
                 }
+                
             }
         }
        

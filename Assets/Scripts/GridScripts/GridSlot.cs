@@ -24,7 +24,12 @@ public class GridSlot : MonoBehaviour, IDropHandler {
             transform.SetSiblingIndex(draggedObjIdx);
             transform.GetComponent<Cell>().CurrentPos = draggedObjIdx;
             eventData.pointerDrag.transform.parent.GetComponent<Cell>().CurrentPos = finalPosIdx;
-            //transform.parent.GetChild(finalPosIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower(); //checks if the object is connected to power or not
+            transform.parent.GetChild(finalPosIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower(); //checks if the object is connected to power or not
+            //if (GameManager.instance.winningCondition(GameManager.instance.ActualLevel))
+            //{
+            //    Debug.Log("entrei aqui no winningcondition");
+            //    GameManager.instance.RefreshPlayerStatus();
+            //}
             //GridManager.instance.UpdateCells();
 
         }
@@ -35,8 +40,13 @@ public class GridSlot : MonoBehaviour, IDropHandler {
             transform.SetSiblingIndex(draggedObjIdx);
             transform.GetComponent<Cell>().CurrentPos = draggedObjIdx;
             eventData.pointerDrag.transform.parent.GetComponent<Cell>().CurrentPos = finalPosIdx;
-            //transform.parent.GetChild(draggedObjIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower();//checks if the new object in the iniPos is connected to power or not
-            //transform.parent.GetChild(finalPosIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower();//checks if the new object in the finalPos is connected to power or not
+            transform.parent.GetChild(draggedObjIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower();//checks if the new object in the iniPos is connected to power or not
+            transform.parent.GetChild(finalPosIdx).GetComponent<Cell>().CheckIfConnectedCellHasPower();//checks if the new object in the finalPos is connected to power or not
+            //if (GameManager.instance.winningCondition(GameManager.instance.ActualLevel))
+            //{
+            //    Debug.Log("entrei aqui no winningcondition");
+            //    GameManager.instance.RefreshPlayerStatus();
+            //}
             //GridManager.instance.UpdateCells();
 
         }

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cell : MonoBehaviour {
+public class Cell : MonoBehaviour
+{
 
     protected bool hasPower;
     

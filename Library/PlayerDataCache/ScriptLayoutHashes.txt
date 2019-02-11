@@ -2,6 +2,7 @@ Android
 SceneListBegin?
 Assets/Scenes/Menu.unity
 SceneListEnd?
+9ec6787e09502a67772fa78eea6effde Assembly-CSharp.dll:.WorldChanger
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 dbc29a6f2739d277c10da432d73adb6d UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -21,6 +22,8 @@ df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.T
 640af23243cc5ea43b2d5cb3f6c02172 Assembly-CSharp.dll:.PowerCell270
 640af23243cc5ea43b2d5cb3f6c02172 Assembly-CSharp.dll:.LampCell270
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ItemDragHandler
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ChainOfCells
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DatabaseHandler
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -123,6 +126,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+7dada21fd95889324cda6c53283c42ab Assembly-CSharp.dll:.LevelDataBase
 26215f135eeb48d8fa1189498c107f6c Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 2e0fd93f459db951da0e2e94e2e33fb7 Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour
@@ -213,14 +217,14 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 640af23243cc5ea43b2d5cb3f6c02172 Assembly-CSharp.dll:.PowerCell90
 640af23243cc5ea43b2d5cb3f6c02172 Assembly-CSharp.dll:.PowerCell180
 640af23243cc5ea43b2d5cb3f6c02172 Assembly-CSharp.dll:.PowerCell0
-7ca4569bf246a540464c4cefe371ba7b Assembly-CSharp.dll:.GridManager
+a57e1785876390bd4ab3f345c0d98593 Assembly-CSharp.dll:.GridManager
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 640af23243cc5ea43b2d5cb3f6c02172 Assembly-CSharp.dll:.V2WayConnectionCell
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameManager
+3a0d883490d08afa071d9e4095d8d574 Assembly-CSharp.dll:.GameManager
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
@@ -300,3 +304,4 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
+128cc2e37fbc45ff105b9ee94552a776 Assembly-CSharp.dll:.LevelChanger

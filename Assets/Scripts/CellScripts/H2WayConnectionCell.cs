@@ -27,17 +27,19 @@ public class H2WayConnectionCell : Cell {
             right = transform.parent.GetChild(currentPos + 1);
             if (right.GetComponent<Cell>().HasPower)
             {
-                if (right.GetComponent<Cell>().cellType == Type.Way4 ||
+                
+                    if (right.GetComponent<Cell>().cellType == Type.Way4 ||
                     right.GetComponent<Cell>().cellType == Type.LampCell180 ||
                     right.GetComponent<Cell>().cellType == Type.PowerCell180 ||
                     right.GetComponent<Cell>().cellType == Type.H2Way)
-                {
-                    
-                    HasPower = true;
-                    PowerColorChange();
-                    //right.GetComponent<Cell>().CheckIfConnectedCellHasPower();
-                    return;
-                }
+                    {
+
+                        HasPower = true;
+                        PowerColorChange();
+                        //right.GetComponent<Cell>().CheckIfConnectedCellHasPower();
+                        return;
+                    }
+                
             }
         }
         if ((currentPos) % gridWidth != 0) // if the position im current at is not divided by 7 at the left
@@ -45,17 +47,19 @@ public class H2WayConnectionCell : Cell {
             left = transform.parent.GetChild(currentPos - 1);
             if (left.GetComponent<Cell>().HasPower)
             {
-                if (left.GetComponent<Cell>().cellType == Type.Way4 ||
-                    left.GetComponent<Cell>().cellType == Type.LampCell0 ||
-                    left.GetComponent<Cell>().cellType == Type.PowerCell0 ||
-                    left.GetComponent<Cell>().cellType == Type.H2Way)
-                {
-                    
-                    HasPower = true;
-                    PowerColorChange();
-                    //left.GetComponent<Cell>().CheckIfConnectedCellHasPower();
-                    return;
-                }
+                
+                    if (left.GetComponent<Cell>().cellType == Type.Way4 ||
+                        left.GetComponent<Cell>().cellType == Type.LampCell0 ||
+                        left.GetComponent<Cell>().cellType == Type.PowerCell0 ||
+                        left.GetComponent<Cell>().cellType == Type.H2Way)
+                    {
+
+                        HasPower = true;
+                        PowerColorChange();
+                       // left.GetComponent<Cell>().CheckIfConnectedCellHasPower();
+                        return;
+                    }
+                
             }
         }
         hasPower = false;

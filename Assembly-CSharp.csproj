@@ -51,7 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Canvas\LevelChanger.cs" />
+     <Compile Include="Assets\Scripts\Canvas\WorldChanger.cs" />
      <Compile Include="Assets\Scripts\CellScripts\Cell.cs" />
+     <Compile Include="Assets\Scripts\CellScripts\ChainOfCells.cs" />
      <Compile Include="Assets\Scripts\CellScripts\H2WayConnectionCell.cs" />
      <Compile Include="Assets\Scripts\CellScripts\LampCell0.cs" />
      <Compile Include="Assets\Scripts\CellScripts\LampCell180.cs" />
@@ -63,10 +66,13 @@
      <Compile Include="Assets\Scripts\CellScripts\PowerCell90.cs" />
      <Compile Include="Assets\Scripts\CellScripts\V2WayConnectionCell.cs" />
      <Compile Include="Assets\Scripts\CellScripts\Way4ConnectionCell.cs" />
+     <Compile Include="Assets\Scripts\Database\DatabaseHandler.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GridScripts\GridManager.cs" />
      <Compile Include="Assets\Scripts\GridScripts\GridSlot.cs" />
      <Compile Include="Assets\Scripts\Handlers\ItemDragHandler.cs" />
+     <Compile Include="Assets\Scripts\Level.cs" />
+     <Compile Include="Assets\Scripts\LevelDataBase.cs" />
      <Compile Include="Assets\Scripts\ManagersLoader.cs" />
      <None Include="Assets\UnityAds\link.xml" />
  <Reference Include="Vuforia.UnityExtensions.Editor">

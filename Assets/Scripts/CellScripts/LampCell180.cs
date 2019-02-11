@@ -23,16 +23,18 @@ public class LampCell180 : Cell {
             left = transform.parent.GetChild(currentPos - 1);
             if (left.GetComponent<Cell>().HasPower)
             {
-                if (left.GetComponent<Cell>().cellType == Type.Way4 ||
-                    left.GetComponent<Cell>().cellType == Type.LampCell0 ||
-                    left.GetComponent<Cell>().cellType == Type.PowerCell0 ||
-                    left.GetComponent<Cell>().cellType == Type.H2Way)
-                {
-                    HasPower = true;
-                    PowerColorChange();
-                    //left.GetComponent<Cell>().CheckIfConnectedCellHasPower();
-                    return;
-                }
+                
+                    if (left.GetComponent<Cell>().cellType == Type.Way4 ||
+                        left.GetComponent<Cell>().cellType == Type.LampCell0 ||
+                        left.GetComponent<Cell>().cellType == Type.PowerCell0 ||
+                        left.GetComponent<Cell>().cellType == Type.H2Way)
+                    {
+                        HasPower = true;
+                        PowerColorChange();
+                        //left.GetComponent<Cell>().CheckIfConnectedCellHasPower();
+                        return;
+                    }
+                
             }
         }
         hasPower = false;
